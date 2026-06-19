@@ -1,0 +1,6 @@
+{
+  "name": "Preston Soon - MGK Prop",
+  "description": "Online business portfolio for Preston Soon, Singapore's leading food-grade property specialist at OrangeTee & Tie.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
