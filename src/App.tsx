@@ -8,6 +8,9 @@ import {
   Compass, 
   Layers, 
   ChevronRight, 
+  ChevronLeft,
+  Quote,
+  Star,
   Flame, 
   Maximize2, 
   Award, 
@@ -17,6 +20,7 @@ import {
   Briefcase,
   ExternalLink
 } from 'lucide-react';
+import { motion, AnimatePresence } from 'motion/react';
 
 export default function App() {
   // Safe WhatsApp pre-fills
@@ -60,6 +64,42 @@ export default function App() {
 
   // Sticky header background transition on scroll
   const [isScrolled, setIsScrolled] = useState(false);
+  
+  // Active Testimonial Carousel state
+  const [activeTestimonial, setActiveTestimonial] = useState(0);
+  const [isTestimonialAutoplay, setIsTestimonialAutoplay] = useState(true);
+
+  const testimonials = [
+    {
+      id: "testimonial-1",
+      quote: "Preston is exceptional. Finding an industrial space in Singapore with precise SFA zoning for raw meat processing and proper grease traps is a compliance nightmare. He navigated the NEA/SFA rules flawlessly and secured our 12,000 sqft facility in West Pecan.",
+      author: "Tan Wei Seong",
+      role: "Co-Founder, Apex Artisanal Meats",
+      property: "SFA-Approved Food Suite",
+    },
+    {
+      id: "testimonial-2",
+      quote: "Working with Preston within our BNI alliance has been extremely lucrative. He helped my client source a custom 3-phase power, 500-amp food factory with pre-fitted separate raw and cooked material elevators within 3 weeks. Complete transactional elite standards.",
+      author: "Marcus Lim",
+      role: "Director, Agri-Tech Logistics SG",
+      property: "Cold-Room Central Hub, Mandai",
+    },
+    {
+      id: "testimonial-3",
+      quote: "Our cold-storage logistics requirements were highly specific regarding structural ceiling limits and floor load-bearing capacity for heavy racking. Preston’s deep technical expertise in food-grade properties saved us months of futile site viewings.",
+      author: "Sarah Mendoza",
+      role: "Chief Operations Officer, Zenith Cold Chain",
+      property: "Cold Storage & Packing Plant, Tuas",
+    },
+  ];
+
+  useEffect(() => {
+    if (!isTestimonialAutoplay) return;
+    const timer = setInterval(() => {
+      setActiveTestimonial((prev) => (prev + 1) % testimonials.length);
+    }, 6000);
+    return () => clearInterval(timer);
+  }, [isTestimonialAutoplay, testimonials.length]);
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -652,6 +692,126 @@ export default function App() {
             <span>Food-Grade Property Specialist</span>
             <span className="hidden md:inline text-brand-green/40 font-mono">·</span>
             <span>HDB & Commercial Licensed</span>
+          </div>
+        </div>
+      </section>
+
+      {/* TESTIMONIALS CAROUSEL SECTION */}
+      <section 
+        id="testimonials-section"
+        className="py-20 bg-gradient-to-br from-brand-green to-brand-green/95 text-white relative overflow-hidden"
+        onMouseEnter={() => setIsTestimonialAutoplay(false)}
+        onMouseLeave={() => setIsTestimonialAutoplay(true)}
+      >
+        {/* Soft background quote marks decoration */}
+        <div className="absolute top-10 left-10 opacity-5 pointer-events-none text-[150px] font-serif leading-none select-none">“</div>
+        <div className="absolute bottom-10 right-10 opacity-5 pointer-events-none text-[150px] font-serif leading-none select-none">”</div>
+        
+        <div className="max-w-4xl mx-auto px-4 md:px-8 space-y-10 relative z-10 text-center">
+          <div className="space-y-2">
+            <span className="text-xs font-semibold uppercase tracking-widest text-brand-gold font-mono block">CLIENT SUCCESS STORIES</span>
+            <h2 className="font-serif text-3xl sm:text-4xl font-bold tracking-tight text-brand-cream">
+              Advising Singapore’s Top Food Institutions
+            </h2>
+            <div className="w-16 h-1 bg-brand-gold mx-auto rounded mt-3"></div>
+          </div>
+
+          {/* Carousel Frame */}
+          <div className="relative min-h-[300px] md:min-h-[240px] flex items-center justify-center">
+            <AnimatePresence mode="wait">
+              {testimonials.map((t, index) => {
+                if (index !== activeTestimonial) return null;
+                return (
+                  <motion.div
+                    key={t.id}
+                    initial={{ opacity: 0, y: 15 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -15 }}
+                    transition={{ duration: 0.4, ease: "easeInOut" }}
+                    className="space-y-6 max-w-3xl mx-auto px-4"
+                  >
+                    {/* Star Rating */}
+                    <div className="flex justify-center gap-1 text-brand-gold" id={`stars-${t.id}`}>
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} size={16} className="fill-current" />
+                      ))}
+                    </div>
+
+                    {/* Testimonial Quote */}
+                    <p className="font-serif text-lg sm:text-xl md:text-2xl leading-relaxed italic text-white/90 font-light">
+                      "{t.quote}"
+                    </p>
+
+                    {/* Client Metadata */}
+                    <div className="space-y-1">
+                      <h4 className="font-sans text-base font-bold text-brand-gold tracking-wide">
+                        {t.author}
+                      </h4>
+                      <p className="font-mono text-xs text-brand-cream/70">
+                        {t.role} · <span className="text-brand-cream underline decoration-brand-gold/60">{t.property}</span>
+                      </p>
+                    </div>
+                  </motion.div>
+                );
+              })}
+            </AnimatePresence>
+          </div>
+
+          {/* Slide Controls & Pagination */}
+          <div className="flex flex-col sm:flex-row items-center justify-between pt-6 border-t border-white/10 gap-4">
+            
+            {/* Auto-play status indicator */}
+            <span className="text-[10px] font-mono text-white/40 tracking-wider uppercase flex items-center gap-2">
+              <span className={`w-1.5 h-1.5 rounded-full ${isTestimonialAutoplay ? 'bg-brand-gold animate-ping' : 'bg-white/40'}`}></span>
+              {isTestimonialAutoplay ? 'Autoplaying (Pause on hover)' : 'Paused'}
+            </span>
+
+            {/* Pagination Dots */}
+            <div className="flex gap-2.5">
+              {testimonials.map((_, idx) => (
+                <button
+                  key={idx}
+                  id={`testimonial-dot-${idx}`}
+                  onClick={() => {
+                    setActiveTestimonial(idx);
+                    setIsTestimonialAutoplay(false);
+                  }}
+                  className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
+                    idx === activeTestimonial 
+                      ? 'bg-brand-gold scale-125' 
+                      : 'bg-white/30 hover:bg-white/50'
+                  }`}
+                  aria-label={`Go to slide ${idx + 1}`}
+                />
+              ))}
+            </div>
+
+            {/* Navigation Buttons */}
+            <div className="flex items-center gap-3">
+              <button
+                id="testimonial-prev-btn"
+                onClick={() => {
+                  setActiveTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+                  setIsTestimonialAutoplay(false);
+                }}
+                className="p-2 rounded-full border border-white/20 hover:border-brand-gold hover:text-brand-gold transition-colors duration-200"
+                aria-label="Previous testimonial"
+              >
+                <ChevronLeft size={16} />
+              </button>
+              <button
+                id="testimonial-next-btn"
+                onClick={() => {
+                  setActiveTestimonial((prev) => (prev + 1) % testimonials.length);
+                  setIsTestimonialAutoplay(false);
+                }}
+                className="p-2 rounded-full border border-white/20 hover:border-brand-gold hover:text-brand-gold transition-colors duration-200"
+                aria-label="Next testimonial"
+              >
+                <ChevronRight size={16} />
+              </button>
+            </div>
+
           </div>
         </div>
       </section>
