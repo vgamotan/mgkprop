@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react';
+// @ts-ignore
+import prestonHeadshot from './assets/images/preston_soon_new_headshot_1782135825508.jpg';
 import { 
   Phone, 
   MapPin, 
@@ -542,7 +544,7 @@ export default function App() {
             <div className="relative w-full max-w-[400px] aspect-[4/5] rounded-lg shadow-2xl p-1 bg-brand-gold">
               <div className="relative w-full h-full bg-brand-green-dark rounded-lg overflow-hidden group">
                 <img 
-                  src="/src/assets/images/preston_soon_new_headshot_1782135825508.jpg" 
+                  src={prestonHeadshot} 
                   alt="Preston Soon - Senior Real Estate Specialist" 
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover object-top opacity-95 transition-all duration-300 group-hover:scale-[1.02]"
