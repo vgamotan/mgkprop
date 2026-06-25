@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>4 Lorong 7 Toa Payoh – Kim Keat Court | MGK Prop</title>
+  <meta name="description" content="3-Room HDB for sale at 4 Lorong 7 Toa Payoh (Kim Keat Court), Singapore 310004. 68 sqm, 2 bedrooms + utility, well-maintained. Contact Preston Soon for viewing." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --orange: #E85C0D;
+      --orange-light: #FFF4EE;
+      --charcoal: #111827;
+      --charcoal-mid: #374151;
+      --charcoal-light: #6B7280;
+      --border: #E5E7EB;
+      --bg: #FFFFFF;
+      --bg-soft: #F9FAFB;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--charcoal);
+      line-height: 1.6;
+    }
+
+    /* ── NAV ── */
+    nav {
+      background: var(--charcoal);
+      padding: 0 32px;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--orange);
+      text-decoration: none;
+      letter-spacing: 0.02em;
+    }
+    .nav-cta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #25D366;
+      color: #fff;
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 9px 18px;
+      border-radius: 8px;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+    }
+    .nav-cta svg { width: 18px; height: 18px; fill: #fff; flex-shrink: 0; }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative;
+      height: 520px;
+      overflow: hidden;
+      background: #1a1a1a;
+    }
+    .hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 35%;
+      display: block;
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.18) 55%, transparent 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 40px 48px;
+    }
+    .hero-tag {
+      display: inline-block;
+      background: var(--orange);
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 4px;
+      margin-bottom: 14px;
+      width: fit-content;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.15;
+      margin-bottom: 10px;
+    }
+    .hero-sub {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.82);
+      font-weight: 400;
+    }
+
+    /* ── STATS BAR ── */
+    .stats-bar {
+      background: var(--charcoal);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      flex-wrap: wrap;
+    }
+    .stat-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 18px 36px;
+      border-right: 1px solid rgba(255,255,255,0.1);
+    }
+    .stat-item:last-child { border-right: none; }
+    .stat-value {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #fff;
+    }
+    .stat-label {
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.5);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 2px;
+    }
+
+    /* ── LAYOUT ── */
+    .page-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 48px 32px 80px;
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 48px;
+      align-items: start;
+    }
+
+    /* ── PRICE SECTION ── */
+    .price-section {
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px 32px;
+      margin-bottom: 32px;
+    }
+    .price-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--charcoal-light);
+      margin-bottom: 6px;
+    }
+    .price-main {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--charcoal);
+      line-height: 1.1;
+    }
+    .price-psf {
+      font-size: 0.9rem;
+      color: var(--charcoal-light);
+      margin-top: 4px;
+      margin-bottom: 24px;
+    }
+    .price-psf span {
+      font-weight: 600;
+      color: var(--charcoal-mid);
+    }
+    .cta-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #25D366;
+      color: #fff;
+      font-size: 0.9rem;
+      font-weight: 600;
+      padding: 13px 24px;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    .btn-primary:hover { opacity: 0.88; }
+    .btn-primary svg { width: 18px; height: 18px; fill: #fff; flex-shrink: 0; }
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--charcoal);
+      color: #fff;
+      font-size: 0.9rem;
+      font-weight: 600;
+      padding: 13px 24px;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    .btn-secondary:hover { opacity: 0.82; }
+    .btn-secondary svg { width: 18px; height: 18px; stroke: #fff; fill: none; flex-shrink: 0; }
+
+    /* ── MARKET STRIP ── */
+    .market-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 40px;
+    }
+    .market-item {
+      background: var(--bg);
+      padding: 18px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .market-value {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--orange);
+    }
+    .market-desc {
+      font-size: 0.78rem;
+      color: var(--charcoal-light);
+      line-height: 1.4;
+    }
+
+    /* ── SECTION HEADERS ── */
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: var(--charcoal);
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--orange);
+      display: inline-block;
+    }
+
+    /* ── GALLERY ── */
+    .gallery { margin-bottom: 48px; }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 240px 240px;
+      gap: 12px;
+    }
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      background: var(--bg-soft);
+    }
+    .gallery-item.tall {
+      grid-row: span 2;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    .gallery-item:hover img { transform: scale(1.04); }
+    .gallery-label {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);
+      color: #fff;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 24px 14px 10px;
+    }
+    .gallery-row-3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 12px;
+      margin-top: 12px;
+    }
+    .gallery-row-3 .gallery-item {
+      height: 160px;
+    }
+
+    /* ── SPECS GRID ── */
+    .specs { margin-bottom: 48px; }
+    .specs-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .spec-cell {
+      background: var(--bg);
+      padding: 16px 20px;
+    }
+    .spec-key {
+      font-size: 0.73rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--charcoal-light);
+      margin-bottom: 4px;
+    }
+    .spec-val {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--charcoal);
+    }
+    .spec-val .highlight { color: var(--orange); }
+
+    /* ── LOCATION ── */
+    .location { margin-bottom: 48px; }
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .chip {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: 8px 16px;
+      font-size: 0.85rem;
+      color: var(--charcoal-mid);
+    }
+    .chip-icon {
+      font-size: 1rem;
+      line-height: 1;
+    }
+    .chip strong {
+      color: var(--charcoal);
+      font-weight: 600;
+    }
+
+    /* ── SIDEBAR ── */
+    .sidebar { position: sticky; top: 80px; }
+    .agent-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+    }
+    .agent-card-header {
+      background: var(--charcoal);
+      padding: 20px;
+      text-align: center;
+    }
+    .agent-avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--orange);
+      margin-bottom: 12px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .agent-avatar-fallback {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: var(--orange);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #fff;
+      margin: 0 auto 12px;
+      border: 3px solid rgba(255,255,255,0.2);
+    }
+    .agent-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 2px;
+    }
+    .agent-company {
+      font-size: 0.78rem;
+      color: rgba(255,255,255,0.6);
+    }
+    .agent-card-body { padding: 20px; }
+    .agent-cea {
+      background: var(--orange-light);
+      border-radius: 8px;
+      padding: 12px 14px;
+      margin-bottom: 16px;
+    }
+    .agent-cea-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.78rem;
+      margin-bottom: 4px;
+    }
+    .agent-cea-row:last-child { margin-bottom: 0; }
+    .cea-label { color: var(--charcoal-light); }
+    .cea-val { font-weight: 600; color: var(--charcoal); }
+    .agent-btns {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .agent-btn-wa {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: #25D366;
+      color: #fff;
+      font-size: 0.9rem;
+      font-weight: 600;
+      padding: 13px;
+      border-radius: 10px;
+      text-decoration: none;
+    }
+    .agent-btn-wa svg { width: 18px; height: 18px; fill: #fff; flex-shrink: 0; }
+    .agent-btn-call {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: var(--charcoal);
+      color: #fff;
+      font-size: 0.9rem;
+      font-weight: 600;
+      padding: 13px;
+      border-radius: 10px;
+      text-decoration: none;
+    }
+    .agent-btn-call svg { width: 18px; height: 18px; stroke: #fff; fill: none; flex-shrink: 0; }
+    .agent-disclaimer {
+      font-size: 0.72rem;
+      color: var(--charcoal-light);
+      text-align: center;
+      margin-top: 14px;
+      line-height: 1.5;
+    }
+
+    /* ── BOTTOM CTA ── */
+    .bottom-cta {
+      background: var(--charcoal);
+      padding: 60px 32px;
+      text-align: center;
+    }
+    .bottom-cta h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+    .bottom-cta p {
+      color: rgba(255,255,255,0.65);
+      margin-bottom: 28px;
+      font-size: 1rem;
+    }
+    .bottom-cta-btns {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .bottom-btn-wa {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #25D366;
+      color: #fff;
+      font-size: 0.95rem;
+      font-weight: 600;
+      padding: 14px 28px;
+      border-radius: 10px;
+      text-decoration: none;
+    }
+    .bottom-btn-wa svg { width: 18px; height: 18px; fill: #fff; flex-shrink: 0; }
+    .bottom-btn-call {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.1);
+      color: #fff;
+      font-size: 0.95rem;
+      font-weight: 600;
+      padding: 14px 28px;
+      border-radius: 10px;
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+    .bottom-btn-call svg { width: 18px; height: 18px; stroke: #fff; fill: none; flex-shrink: 0; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #0a0a0a;
+      padding: 24px 32px;
+      text-align: center;
+    }
+    .footer-brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      color: var(--orange);
+      margin-bottom: 6px;
+    }
+    .footer-disclaimer {
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.3);
+      max-width: 640px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .page-wrapper {
+        grid-template-columns: 1fr;
+        padding: 32px 20px 60px;
+      }
+      .sidebar { position: static; }
+      .hero h1 { font-size: 2rem; }
+      .hero-overlay { padding: 24px 24px; }
+      .stat-item { padding: 14px 20px; }
+      .market-strip { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      .gallery-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+      }
+      .gallery-item.tall { grid-row: auto; height: 240px; }
+      .gallery-item { height: 200px; }
+      .gallery-row-3 { grid-template-columns: 1fr; }
+      .gallery-row-3 .gallery-item { height: 200px; }
+      .specs-grid { grid-template-columns: 1fr; }
+      nav { padding: 0 16px; }
+      .hero { height: 360px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="/" class="nav-brand">MGK Prop</a>
+    <a href="https://wa.me/6588033890?text=Hi%20Preston%2C%20I%27m%20interested%20in%204%20Lorong%207%20Toa%20Payoh.%20Can%20we%20arrange%20a%20viewing%3F" class="nav-cta" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      WhatsApp Preston
+    </a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <img src="./building.jpg" alt="Kim Keat Court Block 4, Lorong 7 Toa Payoh" loading="eager" referrerpolicy="no-referrer" />
+    <div class="hero-overlay">
+      <div class="hero-tag">For Sale · HDB Resale</div>
+      <h1>Kim Keat Court</h1>
+      <p class="hero-sub">Block 4 Lorong 7 Toa Payoh &nbsp;·&nbsp; Singapore 310004 &nbsp;·&nbsp; District 12</p>
+    </div>
+  </section>
+
+  <!-- STATS BAR -->
+  <div class="stats-bar">
+    <div class="stat-item">
+      <div class="stat-value">68 sqm</div>
+      <div class="stat-label">731 sq ft</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-value">3-Room</div>
+      <div class="stat-label">HDB Improved</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-value">99-yr</div>
+      <div class="stat-label">Leasehold</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-value">1969</div>
+      <div class="stat-label">Lease Start</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-value">~42 yrs</div>
+      <div class="stat-label">Remaining Lease</div>
+    </div>
+  </div>
+
+  <!-- MAIN LAYOUT -->
+  <div class="page-wrapper">
+
+    <!-- LEFT COLUMN -->
+    <main>
+
+      <!-- PRICE -->
+      <div class="price-section">
+        <div class="price-label">Asking Price</div>
+        <div class="price-main">S$368,000</div>
+        <div class="price-psf">Approx. <span>S$503 psf</span> &nbsp;·&nbsp; S$5,412 psm</div>
+        <div class="cta-row">
+          <a href="https://wa.me/6588033890?text=Hi%20Preston%2C%20I%27m%20interested%20in%204%20Lorong%207%20Toa%20Payoh%20(Kim%20Keat%20Court).%20Can%20we%20arrange%20a%20viewing%3F" class="btn-primary" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp for Viewing
+          </a>
+          <a href="tel:+6588033890" class="btn-secondary">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.95 10.5a19.79 19.79 0 01-3.07-8.67A2 2 0 012.86 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            Call Preston
+          </a>
+        </div>
+      </div>
+
+      <!-- MARKET INSIGHTS -->
+      <div class="market-strip">
+        <div class="market-item">
+          <div class="market-value">S$2,766/mo</div>
+          <div class="market-desc">Average rental income (last 3 yrs)</div>
+        </div>
+        <div class="market-item">
+          <div class="market-value">~9% yield</div>
+          <div class="market-desc">Estimated gross rental yield</div>
+        </div>
+        <div class="market-item">
+          <div class="market-value">S$420K</div>
+          <div class="market-desc">Highest resale (Apr 2024, same block)</div>
+        </div>
+      </div>
+
+      <!-- GALLERY -->
+      <section class="gallery">
+        <div class="section-title">Property Gallery</div>
+
+        <!-- Top row: 2 main photos -->
+        <div class="gallery-grid">
+          <div class="gallery-item tall">
+            <img
+              src="https://blairhouse.my.canva.site/4lor7toapayoh/_assets/media/628466ffe5fb8b72416f18c19af164ff.jpg"
+              alt="Spacious Kitchen"
+              loading="lazy"
+              referrerpolicy="no-referrer"
+            />
+            <div class="gallery-label">Spacious Kitchen</div>
+          </div>
+          <div class="gallery-item">
+            <img
+              src="https://blairhouse.my.canva.site/4lor7toapayoh/_assets/media/79ea2b8b7529611b15245e2269ebeb35.jpg"
+              alt="Bedroom 1"
+              loading="lazy"
+              referrerpolicy="no-referrer"
+            />
+            <div class="gallery-label">Bedroom 1</div>
+          </div>
+          <div class="gallery-item">
+            <img
+              src="https://blairhouse.my.canva.site/4lor7toapayoh/_assets/media/a05b356505cd5c8a589f9ad1b7edf7a5.jpg"
+              alt="Bedroom 2"
+              loading="lazy"
+              referrerpolicy="no-referrer"
+            />
+            <div class="gallery-label">Bedroom 2</div>
+          </div>
+        </div>
+
+        <!-- Bottom row: 3 smaller photos -->
+        <div class="gallery-row-3">
+          <div class="gallery-item">
+            <img
+              src="https://blairhouse.my.canva.site/4lor7toapayoh/_assets/media/b5e5eb7423fe5845e3f5cd0e7403c651.jpg"
+              alt="Bathroom"
+              loading="lazy"
+              referrerpolicy="no-referrer"
+            />
+            <div class="gallery-label">Bathroom</div>
+          </div>
+          <div class="gallery-item">
+            <img
+              src="https://blairhouse.my.canva.site/4lor7toapayoh/_assets/media/5a6ae26447263c2784d3549d92b5496f.png"
+              alt="Utility / Storage"
+              loading="lazy"
+              referrerpolicy="no-referrer"
+            />
+            <div class="gallery-label">Utility / Storage</div>
+          </div>
+          <div class="gallery-item" style="background: var(--charcoal); display:flex; align-items:center; justify-content:center; flex-direction:column; gap:6px;">
+            <div style="font-family:'Playfair Display',serif; font-size:1.5rem; color:var(--orange); font-weight:700;">+1</div>
+            <div style="font-size:0.75rem; color:rgba(255,255,255,0.6); text-transform:uppercase; letter-spacing:0.08em; text-align:center; padding:0 12px;">More photos available<br>Contact Preston</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SPECS -->
+      <section class="specs">
+        <div class="section-title">Property Details</div>
+        <div class="specs-grid">
+          <div class="spec-cell">
+            <div class="spec-key">Address</div>
+            <div class="spec-val">4 Lor 7 Toa Payoh, S310004</div>
+          </div>
+          <div class="spec-cell">
+            <div class="spec-key">Building Name</div>
+            <div class="spec-val">Kim Keat Court</div>
+          </div>
+          <div class="spec-cell">
+            <div class="spec-key">Flat Type</div>
+            <div class="spec-val"><span class="highlight">3-Room Improved (3I)</span></div>
+          </div>
+          <div class="spec-cell">
+            <div class="spec-key">Floor Area</div>
+            <div class="spec-val">68 sqm / 731 sq ft</div>
+          </div>
+          <div class="spec-cell">
+            <div class="spec-key">Bedrooms</div>
+            <div class="spec-val">2 Bedrooms + 1 Utility</div>
+          </div>
+          <div class="spec-cell">
+            <div class="spec-key">Bathrooms</div>
+            <div class="spec-val">1 Bathroom</div>
+          </div>
+          <div class="spec-cell">
+            <div class="spec-key">Tenure</div>
+            <div class="spec-val">99-Year Leasehold</div>
+          </div>
+          <div class="spec-cell">
+            <div class="spec-key">Lease Commenced</div>
+            <div class="spec-val">1969 (expires 2068)</div>
+          </div>
+          <div class="spec-cell">
+            <div class="spec-key">Remaining Lease</div>
+            <div class="spec-val"><span class="highlight">~42 years</span></div>
+          </div>
+          <div class="spec-cell">
+            <div class="spec-key">Block Height</div>
+            <div class="spec-val">Max 11 Floors</div>
+          </div>
+          <div class="spec-cell">
+            <div class="spec-key">District</div>
+            <div class="spec-val">D12 · Toa Payoh</div>
+          </div>
+          <div class="spec-cell">
+            <div class="spec-key">Condition</div>
+            <div class="spec-val">Well-Maintained</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- LOCATION -->
+      <section class="location">
+        <div class="section-title">Location Highlights</div>
+        <div class="chips">
+          <div class="chip">
+            <span class="chip-icon">🚇</span>
+            <span><strong>Braddell MRT</strong> (NS18) · ~5 min walk</span>
+          </div>
+          <div class="chip">
+            <span class="chip-icon">🚇</span>
+            <span><strong>Toa Payoh MRT</strong> (NS19) · nearby</span>
+          </div>
+          <div class="chip">
+            <span class="chip-icon">🏫</span>
+            <span><strong>First Toa Payoh Pri.</strong> · within 1km</span>
+          </div>
+          <div class="chip">
+            <span class="chip-icon">🏫</span>
+            <span><strong>Guangyang Primary</strong> · within 1km</span>
+          </div>
+          <div class="chip">
+            <span class="chip-icon">🏫</span>
+            <span><strong>Beatty Secondary</strong> · nearby</span>
+          </div>
+          <div class="chip">
+            <span class="chip-icon">🛍️</span>
+            <span><strong>Toa Payoh Hub</strong> · Mall & Hawker</span>
+          </div>
+          <div class="chip">
+            <span class="chip-icon">🏥</span>
+            <span><strong>Toa Payoh Polyclinic</strong> · nearby</span>
+          </div>
+          <div class="chip">
+            <span class="chip-icon">🚌</span>
+            <span><strong>8 Bus Stops</strong> · within walking distance</span>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="agent-card">
+        <div class="agent-card-header">
+          <img
+            src="/assets/images/preston_soon_new_headshot_1782135825508.jpg"
+            alt="Preston Soon"
+            class="agent-avatar"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+          />
+          <div class="agent-avatar-fallback" style="display:none;">PS</div>
+          <div class="agent-name">Preston Soon</div>
+          <div class="agent-company">OrangeTee &amp; Tie Pte Ltd</div>
+        </div>
+        <div class="agent-card-body">
+          <div class="agent-cea">
+            <div class="agent-cea-row">
+              <span class="cea-label">CEA Reg. No.</span>
+              <span class="cea-val">R067294A</span>
+            </div>
+            <div class="agent-cea-row">
+              <span class="cea-label">Agency Licence</span>
+              <span class="cea-val">L3009250K</span>
+            </div>
+          </div>
+          <div class="agent-btns">
+            <a href="https://wa.me/6588033890?text=Hi%20Preston%2C%20I%27m%20interested%20in%204%20Lorong%207%20Toa%20Payoh%20(Kim%20Keat%20Court).%20Can%20we%20arrange%20a%20viewing%3F" class="agent-btn-wa" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              WhatsApp for Viewing
+            </a>
+            <a href="tel:+6588033890" class="agent-btn-call">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.95 10.5a19.79 19.79 0 01-3.07-8.67A2 2 0 012.86 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+              +65 8803 3890
+            </a>
+          </div>
+          <p class="agent-disclaimer">Licensed real estate agent. All viewings by appointment only.</p>
+        </div>
+      </div>
+    </aside>
+
+  </div><!-- /page-wrapper -->
+
+  <!-- BOTTOM CTA -->
+  <section class="bottom-cta">
+    <h2>Interested in This Unit?</h2>
+    <p>Arrange a viewing with Preston today — no obligation, no pressure.</p>
+    <div class="bottom-cta-btns">
+      <a href="https://wa.me/6588033890?text=Hi%20Preston%2C%20I%27m%20interested%20in%204%20Lorong%207%20Toa%20Payoh%20(Kim%20Keat%20Court).%20Can%20we%20arrange%20a%20viewing%3F" class="bottom-btn-wa" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp Preston
+      </a>
+      <a href="tel:+6588033890" class="bottom-btn-call">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.95 10.5a19.79 19.79 0 01-3.07-8.67A2 2 0 012.86 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        +65 8803 3890
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-brand">MGK Prop</div>
+    <p class="footer-disclaimer">
+      Information is provided for reference only and is subject to change without notice. Price, availability, and remaining lease details should be verified independently. MGK Prop and its agents make no representations or warranties regarding accuracy. All transactions are subject to HDB resale eligibility and approval.
+    </p>
+  </footer>
+
+</body>
+</html>
